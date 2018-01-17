@@ -1,0 +1,34 @@
+<idea-plugin>
+  <id>com.daveallie.privnoteExporter</id>
+  <name>Privnote Exporter</name>
+  <version>1.0.0</version>
+  <vendor email="dave@daveallie.com" url="https://daveallie.com">Dave Allie</vendor>
+
+  <description><![CDATA[
+      A plugin to export a selection or a whole file to Privnote.
+    ]]></description>
+
+  <change-notes><![CDATA[
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="PrivnoteExporter.ExportFile" class="com.daveallie.privnoteExporter.actions.ExportFile" text="Create Privnote" description="Create Privnote from current file">
+      <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+    </action>
+  </actions>
+</idea-plugin>
